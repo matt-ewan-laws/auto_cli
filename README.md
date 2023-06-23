@@ -28,7 +28,6 @@ The Auto CLI project follows a modular structure to simplify the usage of Linux 
 ```
 AutoCLI/
 ├── public/
-│   ├── index.html
 │   └── ...
 ├── src/
 │   ├── components/
@@ -50,6 +49,7 @@ AutoCLI/
 │   │   └── ...
 │   ├── App.js
 │   ├── index.js
+│   ├── index.html
 │   ├── routes.js
 │   └── ...
 ├── .gitignore
@@ -60,7 +60,7 @@ AutoCLI/
 
 ## Directory Structure
 
-- `public/`: This directory contains the public assets of the application, including the `index.html` file, which serves as the entry point for the React application.
+- `public/`: This directory contains the public assets of the application.
 
 - `src/`: The main source code directory of the Auto CLI app.
 
@@ -89,6 +89,8 @@ AutoCLI/
   - `data/`: This directory contains additional data files that may be used by the application.
 
     - `commands.json`: A JSON file that provides a condensed version of the command library or an alternative data source.
+
+  - `index.html`: which serves as the entry point for the React application.
 
   - `App.js`: The main container component that houses the application. It imports necessary components and sets up routing.
 
