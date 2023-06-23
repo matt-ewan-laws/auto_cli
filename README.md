@@ -16,3 +16,88 @@ Auto CLI aims to revolutionize the way users work with Linux commands by providi
 - Cross-Platform Accessibility: Develop Auto CLI to be accessible across multiple platforms, including web browsers, desktop applications, and mobile devices. This enables users to access the solution seamlessly from their preferred devices.
 
 Auto CLI strives to simplify the process of discovering, customizing, and understanding Linux commands. By achieving these project aims, it empowers users to work more efficiently and confidently with the Linux command-line interface, regardless of their experience level.
+
+## Development
+
+
+
+### Auto CLI Project Structure
+
+The Auto CLI project follows a modular structure to simplify the usage of Linux commands and provide a user-friendly solution for command discovery and generation. The project structure is organized as follows:
+
+```
+AutoCLI/
+├── public/
+│   ├── index.html
+│   └── ...
+├── src/
+│   ├── components/
+│   │   ├── CommandSearch/
+│   │   ├── CommandCustomization/
+│   │   ├── DynamicForm/
+│   │   ├── SyntaxPreview/
+│   │   └── ...
+│   ├── commands/
+│   │   ├── command1.yaml
+│   │   ├── command2.yaml
+│   │   └── ...
+│   ├── pages/
+│   │   ├── Home/
+│   │   ├── CommandDetails/
+│   │   └── ...
+│   ├── data/
+│   │   ├── commands.json
+│   │   └── ...
+│   ├── App.js
+│   ├── index.js
+│   ├── routes.js
+│   └── ...
+├── .gitignore
+├── package.json
+├── README.md
+└── ...
+```
+
+## Directory Structure
+
+- `public/`: This directory contains the public assets of the application, including the `index.html` file, which serves as the entry point for the React application.
+
+- `src/`: The main source code directory of the Auto CLI app.
+
+  - `components/`: This directory contains reusable React components used throughout the application. Each component represents a specific part of the app's user interface.
+
+    - `CommandSearch/`: A component for quickly finding Linux commands by searching with keywords, descriptions, or specific tasks.
+
+    - `CommandCustomization/`: A component that enables users to easily customize command options and parameters according to their specific needs.
+
+    - `DynamicForm/`: A component responsible for generating dynamic forms with available options and parameters for selected commands.
+
+    - `SyntaxPreview/`: A component that provides instant feedback on command syntax as users make selections in the dynamic form.
+
+    - `...`: Additional components specific to the Auto CLI app.
+
+  - `commands/`: This directory contains individual YAML files, each representing a Linux command. These files store the necessary information, such as the command name, description, options, parameters, and examples.
+
+  - `pages/`: This directory contains the top-level components for each page or route of the application.
+
+    - `Home/`: The homepage component.
+
+    - `CommandDetails/`: A component for displaying detailed information about a specific command.
+
+    - `...`: Additional page components specific to the Auto CLI app.
+
+  - `data/`: This directory contains additional data files that may be used by the application.
+
+    - `commands.json`: A JSON file that provides a condensed version of the command library or an alternative data source.
+
+  - `App.js`: The main container component that houses the application. It imports necessary components and sets up routing.
+
+  - `index.js`: The entry point of the application where the root component (`App`) is mounted and rendered in the DOM.
+
+  - `routes.js`: A configuration file that defines the routes for the application using React Router. It maps URLs to corresponding components, enabling navigation between different pages.
+
+- `.gitignore`: A file that specifies files and directories to be ignored by version control, such as the `node_modules` directory.
+
+- `package.json`: A file that contains metadata about the project and lists its dependencies. It also includes scripts for running, building, and testing the application.
+
+- `README.md`: The documentation file that provides instructions and information
