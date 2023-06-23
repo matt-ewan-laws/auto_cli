@@ -1,0 +1,6 @@
+name: Cmd 1
+options:
+  - name: "List"
+    option: "-l"
+    alias:
+      - "--list"
