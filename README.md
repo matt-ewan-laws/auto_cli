@@ -19,7 +19,7 @@ Auto CLI strives to simplify the process of discovering, customizing, and unders
 
 ## Development
 
-
+Auto CLI is built using Parcel, React, JavaScript, and React Router. These technologies enable the project to simplify Linux command usage by providing a user-friendly solution. React allows for the creation of reusable UI components and efficient state management. JavaScript provides the necessary logic and interactivity. React Router enables navigation within the application. Parcel is used for bundling and optimizing the project's assets. Overall, these technologies help achieve the project's aims of streamlining command discovery, effortless customization, dynamic forms, real-time syntax generation, comprehensive command library, user-friendly experience, and cross-platform accessibility.
 
 ### Auto CLI Project Structure
 
