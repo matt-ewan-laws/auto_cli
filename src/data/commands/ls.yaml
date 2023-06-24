@@ -1,0 +1,141 @@
+name: ls
+description: The `ls` command is used to list files and directories in a directory. It provides a quick overview of the contents of a directory and basic information about the files and directories within it. By default, it displays a simple list of names in alphabetical order. Additional options can be used to customize the output, such as displaying detailed information, including hidden files, sorting by modification time, and more.
+
+options:
+  - name: -a
+    aliases:
+      - --all
+    description: do not ignore entries starting with .
+
+  - name: -l
+    description: use a long listing format
+
+  - name: --block-size
+    param: SIZE
+    description: with -l, scale sizes by SIZE when printing them; e.g., '--block-size=M'; see SIZE format below
+    instructions: |
+      The `--block-size` option in the `ls` command allows you to control the display of file sizes when using the `-l` (long format) option. It scales the sizes by the specified `SIZE` value.
+
+      1. The `--block-size` option is used with the `-l` option in the `ls` command. For example:
+        ```
+        ls -l --block-size=SIZE
+        ```
+
+      2. Replace `SIZE` with the desired size value. `SIZE` should be an integer followed by an optional unit. For example, to scale sizes by megabytes (MB), use `--block-size=MB`.
+
+      3. The `SIZE` value can be specified using decimal powers of 1000 or binary powers of 1024. You can use the following units:
+        - Decimal units: K (kilobytes), M (megabytes), G (gigabytes), T (terabytes), P (petabytes), E (exabytes), Z (zettabytes), Y (yottabytes).
+        - Binary units: KiB (kibibytes), MiB (mebibytes), GiB (gibibytes), TiB (tebibytes), PiB (pebibytes), EiB (exbibytes), ZiB (zebibytes), YiB (yobibytes).
+
+        For example, `--block-size=K` will display sizes in kilobytes, and `--block-size=GiB` will display sizes in gibibytes.
+
+      4. When using decimal units (powers of 1000), the value is calculated based on multiples of 1000. For example, 1 kilobyte (KB) is equal to 1000 bytes.
+
+      5. When using binary units (powers of 1024), the value is calculated based on multiples of 1024. For example, 1 kibibyte (KiB) is equal to 1024 bytes.
+
+      6. Once you have chosen the desired `SIZE` value and unit, append it to the `--block-size` option. For example, to display file sizes in megabytes, use `--block-size=MB`.
+
+      By following these instructions, you can customize the display of file sizes in the `ls` command using the `--block-size` option.
+    values:
+      - value: K
+        description: kilobytes
+      - value: M
+        description: megabytes
+      - value: G
+        description: gigabytes
+      - value: T
+        description: terabytes
+      - value: P
+        description: petabytes
+      - value: E
+        description: exabytes
+      - value: Z
+        description: zettabytes
+      - value: Y
+        description: yottabytes
+      - value: KiB
+        description: kibibytes
+      - value: MiB
+        description: mebibytes
+      - value: GiB
+        description: gibibytes
+      - value: TiB
+        description: tebibytes
+      - value: PiB
+        description: pebibytes
+      - value: EiB
+        description: exbibytes
+      - value: ZiB
+        description: zebibytes
+      - value: YiB
+        description: yobibytes
+      - value: KB
+        description: kilobytes
+      - value: MB
+        description: megabytes
+      - value: GB
+        description: gigabytes
+      - value: TB
+        description: terabytes
+      - value: PB
+        description: petabytes
+      - value: EB
+        description: exabytes
+      - value: ZB
+        description: zettabytes
+      - value: YB
+        description: yottabytes
+
+  - name: -A
+    aliases:
+      - --almost-all
+    description: do not list implied . and ..
+
+  - name: --author
+    description: with -l, print the author of each file
+
+  - name: -b
+    aliases:
+      - --escape
+    description: print C-style escapes for nongraphic characters
+
+  - name: -B
+    aliases:
+      - --ignore-backups
+    description: do not list implied entries ending with ~
+
+  - name: -c
+    description: |
+      with -lt: sort by, and show, ctime (time of last modification of file status information);
+      with -l: show ctime and sort by name;
+      otherwise: sort by ctime, newest first
+
+  - name: -C
+    description: list entries by columns
+
+  - name: --color
+    param: WHEN
+    description: color the output WHEN; more info below
+    values:
+      - always
+      - auto
+      - never
+
+  - name: -d
+    aliases:
+      - --directory
+    description: list directories themselves, not their contents
+
+  - name: -D
+    aliases:
+      - --dired
+    description: generate output designed for Emacs' dired mode
+
+  - name: -f
+    description: list all entries in directory order
+
+  - name: -F
+    aliases:
+      - --classify
+    param: WHEN
+    description: append indicator (one of */=>@|) to entries WHEN
