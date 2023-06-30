@@ -19,7 +19,7 @@ Auto CLI strives to simplify the process of discovering, customizing, and unders
 
 ## Development
 
-Auto CLI is built using Parcel, React, JavaScript, and React Router. These technologies enable the project to simplify Linux command usage by providing a user-friendly solution. React allows for the creation of reusable UI components and efficient state management. JavaScript provides the necessary logic and interactivity. React Router enables navigation within the application. Parcel is used for bundling and optimizing the project's assets. Overall, these technologies help achieve the project's aims of streamlining command discovery, effortless customization, dynamic forms, real-time syntax generation, comprehensive command library, user-friendly experience, and cross-platform accessibility.
+Auto CLI is built using Parcel, React, JavaScript, and React Router. These technologies enable the project to simplify Linux command usage by providing a user-friendly solution.
 
 ### Auto CLI Project Structure
 
@@ -88,7 +88,9 @@ AutoCLI/
 
   - `data/`: This directory contains additional data files that may be used by the application.
 
-    - `commands.json`: A JSON file that provides a condensed version of the command library or an alternative data source.
+    - `index.yaml`: A JSON file that provides a condensed version of the command library.
+
+    - `...`: Specific commands.
 
   - `index.html`: which serves as the entry point for the React application.
 
@@ -96,7 +98,7 @@ AutoCLI/
 
   - `index.js`: The entry point of the application where the root component (`App`) is mounted and rendered in the DOM.
 
-  - `routes.js`: A configuration file that defines the routes for the application using React Router. It maps URLs to corresponding components, enabling navigation between different pages.
+  - `Routes.js`: A configuration file that defines the routes for the application using React Router. It maps URLs to corresponding components, enabling navigation between different pages.
 
 - `.gitignore`: A file that specifies files and directories to be ignored by version control, such as the `node_modules` directory.
 
